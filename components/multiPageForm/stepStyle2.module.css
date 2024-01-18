@@ -1,0 +1,12 @@
+.radio_input1:checked:after {
+  border: none;
+}
+.radio_input1:scope {
+  border: none;
+}
+
+.radio_input1[type="radio"] {
+  outline: none;
+  color: #a05956;
+  --tw-ring-color:none;
+}
