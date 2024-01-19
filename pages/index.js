@@ -50,12 +50,12 @@ const Home = () => {
   const isRTL = getIsRTL(router?.locale)
 
   const handleItemHover = (imageIndex) => {
-    setIsTransitioning(true)
-
-    setTimeout(() => {
-      setCurrentImageIndex(imageIndex)
-      setIsTransitioning(false)
-    }, 200)
+    // setIsTransitioning(true)
+    setCurrentImageIndex(imageIndex)
+    // setTimeout(() => {
+     
+    //   setIsTransitioning(false)
+    // }, 200)
   }
 
   const imageSources = [HowItWorks1, HowItWorks2, HowItWorks3, HowItWorks4]
@@ -288,20 +288,24 @@ const Home = () => {
           <div className="flex flex-col md:flex-row md:justify-between md:gap-[70px]">
             <div className="w-full flex items-center justify-center">
               <Image
-                src={imageSources[currentImageIndex]}
+                loading="lazy"
+                src={`/images/how-it-works/${currentImageIndex + 1}.png`}
+                width={601}
+                height={601}
                 number="1"
                 alt="how it works"
-                className={`fadeImage ${imageTransitionClass} -sm:h-[346px] -sm:mb-6`}
+                className={`object-contain fadeImage ${imageTransitionClass} -sm:h-[346px] -sm:mb-6`}
                 style={{
                   transition: "opacity 0.5s ease-in-out",
                   opacity: isTransitioning ? 0 : 1,
                 }}
               />
             </div>
-            <div className="w-full grid grid-cols-1 gap-y-[85px] -lg:gap-y-[45px] -md:gap-y-[25px]">
+            <div className="w-full grid grid-cols-1 gap-y-[20px] -lg:gap-y-[45px] -md:gap-y-[25px]">
               <div onMouseEnter={() => handleItemHover(0)}>
                 <HowItWorksItem
                   number="1"
+                  activeIndex = {currentImageIndex + 1}
                   title={t("home_guide_title_1")}
                   detail={t("home_guide_detail_1")}
                 />
@@ -309,6 +313,7 @@ const Home = () => {
               <div onMouseEnter={() => handleItemHover(1)}>
                 <HowItWorksItem
                   number="2"
+                  activeIndex = {currentImageIndex + 1}
                   title={t("home_guide_title_2")}
                   detail={t("home_guide_detail_2")}
                 />
@@ -316,6 +321,7 @@ const Home = () => {
               <div onMouseEnter={() => handleItemHover(2)}>
                 <HowItWorksItem
                   number="3"
+                  activeIndex = {currentImageIndex + 1}
                   title={t("home_guide_title_3")}
                   detail={t("home_guide_detail_3")}
                 />
@@ -323,6 +329,7 @@ const Home = () => {
               <div onMouseEnter={() => handleItemHover(3)}>
                 <HowItWorksItem
                   number="4"
+                  activeIndex = {currentImageIndex + 1}
                   title={t("home_guide_title_4")}
                   detail={t("home_guide_detail_4")}
                 />
@@ -372,7 +379,7 @@ const Home = () => {
             />
             <FaqCollapse
               title={t("home_faq_item5_title")}
-              content={t("home_faq_item1_ans")}
+              content={t("home_faq_item5_ans")}
             />
           </div>
         </div>

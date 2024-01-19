@@ -14,7 +14,7 @@ const Header = () => {
     setOpen(!open)
   }
   return (
-    <nav className="bg-pink-100">
+    <nav className="bg-white">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-end md:justify-center mx-auto p-4 md:py-8 relative">
         <a
           href="/"

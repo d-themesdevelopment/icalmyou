@@ -81,12 +81,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: colors.indigo,
+        primary: "#A05956",
         light: {
           100: "#feffff",
-        },
-        primary: {
-          100: "#E6F6FE",
         },
         dashboardPrimary: "#1A4FBA",
         btnPrimary: "#1bbec3",
