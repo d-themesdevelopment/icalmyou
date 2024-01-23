@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { CircularProgressbar, buildStyles  } from 'react-circular-progressbar';
 
-const CircleProgress = ({percent, content}) => {
+const CircleProgress = ({adClass="", percent, content}) => {
   return (
     <>
-      <div class="w-[311px] text-center mx-auto">
+      <div class={`w-[311px] text-center mx-auto ${adClass}`}>
         <div class="w-[200px] h-[200px] mx-auto mb-[22px]">
           <CircularProgressbar value={percent} text={`${percent}%`} strokeWidth="5"
             styles={buildStyles({

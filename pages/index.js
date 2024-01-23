@@ -120,8 +120,8 @@ const Home = () => {
           </div>
         </div>
         <div class="relative">
-          <div class="mx-auto max-w-screen-xl text-center grid grid-cols-1 md:grid-cols-3 gap-y-[85px] md:gap-[56px] pb-[42px] md:pb-[115px]">
-            <div class="pt-[18px] text-center therapy-card border-[0.5px] border-[#A3E3BB] bg-[#E8F5EE] w-[350px] mx-auto -mt-[170px]">
+          <div class={`mx-auto max-w-screen-xl text-center grid grid-cols-1 md:grid-cols-3 gap-y-[85px] md:gap-[56px] pb-[42px] md:pb-[115px]`}>
+            <div class={`pt-[18px] text-center therapy-card border-[0.5px] border-[#A3E3BB] bg-[#E8F5EE] w-[350px] mx-auto -mt-[170px] ${isRTL ? "order-last" : ""}`}>
               <p class="text-gray-600 mb-[12px] text-[16px]">
                 {t("therapy_for_me")}
               </p>
@@ -183,7 +183,7 @@ const Home = () => {
               <Image src={Therapy2} alt="therapy card" class="mx-auto" />
             </div>
 
-            <div class="pt-[18px] text-center therapy-card bg-[#F8FCFF] w-[350px] mx-auto md:-mt-[170px]">
+            <div class={`pt-[18px] text-center therapy-card bg-[#F8FCFF] w-[350px] mx-auto md:-mt-[170px] ${isRTL ? "order-first" : ""}`}>
               <p class="text-gray-600 mb-[12px] text-[16px]">
                 {t("for_my_child")}
               </p>
@@ -217,11 +217,13 @@ const Home = () => {
         </div>
         <Image src={HeroBottom} alt="" class="w-full " />
       </section>
+
       <section class="about-us bg-blue-light px-2">
         <div class="mx-auto max-w-screen-xl px-2 md:py-[90px]">
           <SectionTitle title={t("about_us")} />
+
           <div class="flex flex-col md:flex-row md:justify-between md:gap-[70px]">
-            <div class="w-full">
+            <div class={`w-full ${isRTL ? "order-last text-right" : ""}`}>
               <p class="font-soleSerifHeadlineBold text-[30px] md:text-[40px] text-black-main mb-[30px] md:mb-[60px] font-bold leading-none capitalize">
                 {t("home_about_us_title")}
               </p>
@@ -232,7 +234,7 @@ const Home = () => {
                 <br />
                 {t("home_about_us_3")}
               </p>
-              <div class="my-[50px] flex">
+              <div class={`my-[50px] flex ${isRTL ? "justify-end" : ""}`}>
                 <div class="flex items-center text-brown-main text-[16px] md:text-[20px] font-bold mr-[18px] md:mr-[30px]">
                   <span class="display rounded-full w-[20px] h-[20px] md:w-[34px] md:h-[34px] flex justify-center items-center bg-blue-500 mr-2">
                     <Image
@@ -266,7 +268,8 @@ const Home = () => {
               </div>
               <LinkPageButton text={t("get_matched_to_a_therapy")} href="#" />
             </div>
-            <div class="w-full relative mt-[80px] md:mt-0">
+            
+            <div class={`w-full relative mt-[80px] md:mt-0 ${isRTL ? "order-first" : ""}`}>
               <Image src={Dots} alt="about" class="absolute top-0 left-0" />
               <Image src={AboutUs} alt="about" class="relative z-10 w-full" />
               <Image src={Dots} alt="about" class="absolute bottom-0 right-0" />
@@ -286,7 +289,7 @@ const Home = () => {
           <SectionTitle title={t("what_we_offer")} />
           <SectionBigTitle title={t("how_it_works")} />
           <div className="flex flex-col md:flex-row md:justify-between md:gap-[70px]">
-            <div className="w-full flex items-center justify-center">
+            <div className={`w-full flex items-center justify-center ${isRTL ? "order-last" : ""}`}>
               <Image
                 loading="lazy"
                 src={`/images/how-it-works/${currentImageIndex + 1}.png`}
@@ -301,7 +304,7 @@ const Home = () => {
                 }}
               />
             </div>
-            <div className="w-full grid grid-cols-1 gap-y-[20px] -lg:gap-y-[45px] -md:gap-y-[25px]">
+            <div className={`w-full grid grid-cols-1 gap-y-[20px] -lg:gap-y-[45px] -md:gap-y-[25px] ${isRTL ? "order-first" : ""}`}>
               <div onMouseEnter={() => handleItemHover(0)}>
                 <HowItWorksItem
                   number="1"
@@ -343,9 +346,9 @@ const Home = () => {
         <Image src={OffersBottom} alt="" class="w-full " />
         <div class="mx-auto max-w-screen-xl text-center py-[40px] md:py-[90px]">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-y-[95px]">
-            <CircleProgress percent="70" content={t("home_usage_percent1")} />
+            <CircleProgress adClass={`${isRTL ? "order-last" : ""}`} percent="70" content={t("home_usage_percent1")} />
             <CircleProgress percent="80" content={t("home_usage_percent2")} />
-            <CircleProgress percent="98" content={t("home_usage_percent3")} />
+            <CircleProgress adClass={`${isRTL ? "order-first" : ""}`} percent="98" content={t("home_usage_percent3")} />
           </div>
         </div>
       </section>

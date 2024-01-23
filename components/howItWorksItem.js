@@ -21,11 +21,11 @@ const HowItWorksItem = ({ number, title, detail, activeIndex }) => {
         <span
           class={`w-[60px] h-[60px] flex justify-center items-center rounded-full transition-all ${activeIndex == number ? "bg-[#FC6EAC] text-[#fff]" : "text-[#FC6EAC]" } ${
             hover ? "bg-[#FC6EAC] text-[#fff]" : ""
-          } text-[48px] font-soleSerifHeadlineBold mr-[20px]`}
+          } text-[48px] font-soleSerifHeadlineBold ${isRTL ? "ml-[20px]" : "mr-[20px]"}`}
         >
           {number}
         </span>
-        <div class="text-left w-[calc(100%-80px)]">
+        <div class={` w-[calc(100%-80px)] ${isRTL ? "text-right" : "text-left"}`}>
           <p class="font-bold text-[24px] capitalize text-[#A05956] mb-2">
             {title}
           </p>
