@@ -294,7 +294,7 @@ const Home = () => {
                 height={601}
                 number="1"
                 alt="how it works"
-                className={`object-contain fadeImage ${imageTransitionClass} -sm:h-[346px] -sm:mb-6`}
+                className={`object-contain sm:h-[601px] fadeImage ${imageTransitionClass} -sm:h-[346px] -sm:mb-6`}
                 style={{
                   transition: "opacity 0.5s ease-in-out",
                   opacity: isTransitioning ? 0 : 1,
