@@ -64,7 +64,7 @@ function Signup(props) {
       return
     }
 
-    fetch("http://184.72.123.46/cms/api/auth/local/register", {
+    fetch("https://icalmyou.com/cms/api/auth/local/register", {
       method: "POST",
       body: JSON.stringify({
         username: username,

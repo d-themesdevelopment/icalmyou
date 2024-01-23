@@ -18,7 +18,7 @@ const BlogSection = (props) => {
     const fetchData = async () => {
       setIsLoading(true)
       try {
-        const response = await fetch("http://184.72.123.46/cms/api/articles?populate=*")
+        const response = await fetch("https://icalmyou.com/cms/api/articles?populate=*")
         const data = await response.json()
 
         const events = data.data.map((item) => ({
@@ -60,14 +60,14 @@ const BlogSection = (props) => {
         <SectionTitle title={t("home_blog_title")} />
         <SectionBigTitle title={t("home_blog_big_title")} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[95px] mt-10 md:mt-0">
-          {blogs.map((event, index) => (
+          {new Array(3).fill(0).map((event, index) => (
             <BlogItem
               key={event.id}
               slug={event.slug}
               catBg="bg-[#DEEFED]"
               catColor="text-[#256059]"
-              image={event.image}
-              text={event.title}
+              image={`/images/blogs/${index + 1}.png`}
+              text={t(`blogs.${index}.title`)}
             />
           ))}
         </div>

@@ -5,8 +5,8 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: '184.72.123.46',
+        protocol: 'https',
+        hostname: 'icalmyou.com',
         port: '',
       },
     ],
@@ -14,7 +14,7 @@ module.exports = {
 }
 
 // pathname: '/cms/**',
-// http://184.72.123.46/cms/uploads/large_meeting_online_therap_b4b6128680.jpg
+// https://icalmyou.com/cms/uploads/large_meeting_online_therap_b4b6128680.jpg
 // images: {
 //   domains: ["amazonaws.com"],
 // },

@@ -2,7 +2,7 @@
 const SectionBigTitle = ({title}) => {
   return (
     <>
-      <p class="font-soleSerifHeadlineBold text-[40px] text-primary md:mb-[60px] font-bold leading-none capitalize">{title}</p>
+      <p class="font-soleSerifHeadlineBold text-[40px] md:mb-[60px] font-bold leading-none capitalize">{title}</p>
     </>
   )
 }

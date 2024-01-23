@@ -10,7 +10,7 @@ const BlogItem = ({ image, text, catBg, catColor, slug }) => {
     <>
       <div class="w-[350px] mx-auto flex flex-col justify-evenly align-middle items-center">
         <span class="relative block">
-          <Image src={`http://184.72.123.46/cms${image}`} alt="blog item" class="mb-[30px]" height={195} width={350} />
+          <Image src={`${image}`} alt="blog item" class="mb-[30px]" height={195} width={350} />
           <CategoryBadge catBg={catBg} catColor={catColor} />
         </span>
         <p class="text-brown-main text-[16px] mb-[20px]">{text}</p>

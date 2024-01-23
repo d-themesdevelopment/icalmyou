@@ -1,5 +1,5 @@
 export async function getAllBlogs() {
-  const response = await fetch("http://184.72.123.46/cms/api/articles")
+  const response = await fetch("https://icalmyou.com/cms/api/articles")
   const data = await response.json()
   console.log("data ====> ", data)
 
@@ -19,7 +19,7 @@ export async function getAllBlogs() {
 }
 
 export async function getSingleBlogs() {
-  const response = await fetch("http://184.72.123.46/cms/api/articles")
+  const response = await fetch("https://icalmyou.com/cms/api/articles")
   const data = await response.json()
   console.log("data ====> ", data)
 

@@ -797,6 +797,45 @@
   "call_appointment_cancelation": "Call Agent to cancel",
   "enter_valid_number": "Enter valid number",
   "our_therapy": "Our Therapy",
+  "therapy_list": [
+    {
+      "title": "Depression Therapy",
+      "description": "explore emotions, identify coping strategies, and work towards understanding and managing the challenges associated with depression"
+    },
+    {
+      "title": "Couples Counseling",
+      "description": "Strengthen your bond, resolve conflicts, and enhance communication through expert guidance"
+    },
+    {
+      "title": "Attention Deficit Hyperactivity Disorder (ADHD)",
+      "description": "A condition affecting focus, impulse control, and energy levels. Therapy provides behavioral interventions, coping strategies, and improves self-esteem."
+    },
+    {
+      "title": "Speech and Language Therapy",
+      "description": "Therapy helps children overcome communication challenges through individualized treatment plans. By focusing on speech sound disorders, language development,"
+    },
+    {
+      "title": "Family Systems Therapy",
+      "description": "An approach that looks at individuals as part of a family system. It sees families as interconnected, where one person's actions can affect everyone"
+    }
+    ,
+    {
+      "title": "Pre-Marital Counseling",
+      "description": "Is a proactive and supportive process where couples engage in guided conversations to strengthen their relationship before marriage"
+    },
+    {
+      "title": "Cognitive-Behavioral Therapy",
+      "description": "Effective form of psychotherapy that focuses on the relationship between thoughts, feelings, and behaviors"
+    },
+    {
+      "title": "Eating Disorders",
+      "description": "Therapy involves personalized counseling, nutritional guidance, and cognitive-behavioral techniques to address the emotional and psychological aspects of disordered eating"
+    },
+    {
+      "title": "Anger Management",
+      "description": "Specialized counseling service that helps people understand and control their anger. Led by mental health professionals"
+    }
+  ],
   "services": "Services",
   "online_therapy": "Online Theray",
   "couples_therapy": "Couples Therapy",
@@ -838,6 +877,17 @@
   "home_usage_percent3": "Found iClamyou to be more convenient than face-to-face therapy ",
   "home_blog_title": "READ OUR POPULAR ARTICLES",
   "home_blog_big_title": "read our blogs",
+  "blogs": [
+    {
+      "title": "What to Expect When Meeting Your Therapist Online"
+    },
+    {
+      "title": "eeling Mental Fatigue | Learn about its Symptoms, Causes, and Ways to Overcome It"
+    },
+    {
+      "title": "Distinguishing between psychological frustration and depression is evident."
+    }
+  ],
   "category": "Category",
   "more_info": "More info",
   "home_faq_title": "WE HAVE GOT THE ANSWERS",

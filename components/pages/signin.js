@@ -48,7 +48,7 @@ function Signin({ onLogin, callbackUrl = "" }) {
       return
     }
 
-    fetch("http://184.72.123.46/cms/api/auth/local/", {
+    fetch("https://icalmyou.com/cms/api/auth/local/", {
       method: "POST",
       body: JSON.stringify({
         identifier: enteredEmail,

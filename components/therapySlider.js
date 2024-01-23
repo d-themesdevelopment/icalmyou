@@ -5,8 +5,10 @@ import TherapySliderItem from "./therapySliderItem"
 import TherapyImg1 from "@/images/therapy-1.png"
 import TherapyImg2 from "@/images/therapy-2.png"
 import TherapyImg3 from "@/images/therapy-3.png"
+import { useTranslation } from "next-i18next"
 
 const TherapySlider = ({ items }) => {
+  const { t } = useTranslation()
   const [currentIndex, setCurrentIndex] = useState(0)
   const slider = createRef()
   const settings = {
@@ -39,16 +41,14 @@ const TherapySlider = ({ items }) => {
     <>
       <div class="relative mb-[45px]">
         <Slider ref={slider} {...settings}>
-          {items?.map((member, index) => (
-            <>
-              <TherapySliderItem
-                // image={getTherapyImage(index)}
-                title={member.title}
-                description={member.description}
-                image={member.image}
-                key={index}
-              />
-            </>
+          {new Array(9).fill(1)?.map((member, index) => (
+            <TherapySliderItem
+            // image={getTherapyImage(index)}
+            title={t(`therapy_list.${index}.title`)}
+            description={t(`therapy_list.${index}.description`)}
+            image={`/images/therapy/${index + 1}.png`}
+            key={index}
+          />
           ))}
         </Slider>
 
