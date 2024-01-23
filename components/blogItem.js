@@ -4,11 +4,11 @@ import { useTranslation } from "next-i18next"
 import CategoryBadge from "./categoryBadgeColored"
 import BlogButton from "@/components/buttons/BlogBtn"
 
-const BlogItem = ({ image, text, catBg, catColor, slug }) => {
+const BlogItem = ({ adClass="", image, text, catBg, catColor, slug }) => {
   const { t } = useTranslation()
   return (
     <>
-      <div class="w-[350px] mx-auto flex flex-col justify-evenly align-middle items-center">
+      <div class={`w-[350px] mx-auto flex flex-col justify-evenly align-middle items-center ${adClass}`}>
         <span class="relative block">
           <Image src={`${image}`} alt="blog item" class="mb-[30px]" height={195} width={350} />
           <CategoryBadge catBg={catBg} catColor={catColor} />

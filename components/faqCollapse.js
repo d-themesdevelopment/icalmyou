@@ -1,9 +1,14 @@
 /* eslint-disable prettier/prettier */
+import { getIsRTL } from "@/utils/localize"
+import { useRouter } from "next/router"
 import { useState } from "react"
 import Collapsible from "react-collapsible"
 
 const FaqCollapse = ({ title, content }) => {
   const [open, setOpen] = useState(false)
+  const router = useRouter()
+  const isRTL = getIsRTL(router?.locale)
+
   return (
     <>
       <div>
@@ -11,10 +16,10 @@ const FaqCollapse = ({ title, content }) => {
           className="bg-white md:w-[840px] flex justify-between items-center cursor-pointer mx-auto px-[16px] py-[10px] rounded-[6px]"
           onClick={() => setOpen(!open)}
         >
-          <p className="text-[16px] md:text-[24px] font-semibold capitalize text-black-light">
+          <p className={`text-[16px] md:text-[24px] font-semibold capitalize text-black-light ${isRTL ? "order-last" : ""}`}>
             {title}
           </p>
-          <span className="icon-up active rounded-2xl w-[46px] h-[46px] flex justify-center items-center shrink-0">
+          <span className={`icon-up active rounded-2xl w-[46px] h-[46px] flex justify-center items-center shrink-0 ${isRTL ? "order-first" : ""}`}>
             {!open && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,8 +51,8 @@ const FaqCollapse = ({ title, content }) => {
           </span>
         </div>
         <Collapsible open={open} trigger="">
-          <div className="content-wrapper bg-white md:w-[840px] mx-auto">
-            <p className="text-[18px] text-black-light font-semibold capitalize text-left p-[16px]">
+          <div className={`content-wrapper bg-white md:w-[840px] mx-auto ${isRTL ? "text-right" : "text-left"}`}>
+            <p className="text-[18px] text-black-light font-semibold capitalize  p-[16px]">
               {content}
             </p>
           </div>

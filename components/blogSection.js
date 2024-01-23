@@ -8,9 +8,13 @@ import Blog1 from "@/images/blog1.png"
 import Blog2 from "@/images/blog2.png"
 import Blog3 from "@/images/blog3.png"
 import { useEffect, useState } from "react"
+import { getIsRTL } from "@/utils/localize"
+import { useRouter } from "next/router"
 
 const BlogSection = (props) => {
   const { t } = useTranslation()
+  const router = useRouter()
+  const isRTL = getIsRTL(router?.locale)
   const [blogs, setBlogs] = useState([])
   const [isLoading, setIsLoading] = useState(false)
 
@@ -60,9 +64,10 @@ const BlogSection = (props) => {
         <SectionTitle title={t("home_blog_title")} />
         <SectionBigTitle title={t("home_blog_big_title")} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[95px] mt-10 md:mt-0">
-          {new Array(3).fill(0).map((event, index) => (
+          {new Array(3).fill(0).slice(0, 3).map((event, index) => (
             <BlogItem
               key={event.id}
+              adClass={ isRTL ? index === 0 ? "order-last" : index === 2 ? "order-first" : "" : "" }
               slug={event.slug}
               catBg="bg-[#DEEFED]"
               catColor="text-[#256059]"
